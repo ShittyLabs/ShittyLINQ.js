@@ -13,6 +13,9 @@
       "git add"
     ]
   },
+  "prettier": {
+    "singleQuote": true
+  },
   "author": "Johnny Reina <johnny.r.reina@gmail.com>",
   "license": "MIT",
   "devDependencies": {
