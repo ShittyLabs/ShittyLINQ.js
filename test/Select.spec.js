@@ -1,7 +1,7 @@
 const expect = require('chai').expect;
 require('../index')();
 
-describe('map', function() {
+describe('Array#prototype#Select', function() {
   it('Should double each number', function() {
     const input = [1, 2, 3];
     const expected = [2, 4, 6];
