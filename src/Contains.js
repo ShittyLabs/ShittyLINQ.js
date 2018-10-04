@@ -4,8 +4,8 @@
  * @returns {boolean}
  */
 function Contains(element) {
-  if (this.indexOf(element) === -1) {
-    return false;
+  if (this.Contains(element)) {
+    return true;
   }
-  return true;
+  return false;
 }
