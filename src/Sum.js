@@ -1,6 +1,6 @@
 /**
- * @template int?
- * @returns {int}
+ * @template number?
+ * @returns {number}
  */
 function Sum() {
     const sum = 0;
