@@ -3,11 +3,11 @@
  * @template U
  * @param {Array<T>} list
  * @param {U} count
- * @returns {T}
+ * @returns {Array<T>}
  */
 function TakeLast(list, count) {
-  const size = list.length;
-  if (size < count) throw 'Array has not enough elements';
+  if (list.length < count) throw 'Array has not enough elements';
+
   return list.slice(-count);
 }
 
