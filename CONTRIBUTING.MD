@@ -10,7 +10,8 @@
 1. Add a file at `./src/<method name>.js`.
 1. Implement the method.
 1. Document the method using standard JSDoc documentation syntax.
-1. Import and bind the method to `Array.prototype` in `index.js`
+1. Import and bind the method to `Array.prototype` in `index.js`.
+1. Add a type definition to `index.d.ts`.
 1. [Add tests](#adding-a-set-of-tests).
 1. Push branch to your fork.
 1. Create a pull request against the `develop` branch of the main repo.

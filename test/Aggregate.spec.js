@@ -2,10 +2,14 @@ const expect = require('chai').expect;
 require('..')();
 
 describe('Array#prototype#Select', function() {
+  /**
+   * @param {number} a
+   * @param {number} b
+   */
+  const add = (a, b) => a + b;
   const input = [1, 2, 3, 4, 5];
 
   it('Should sum each number when seed is supplied', function() {
-    const add = (a, b) => a + b;
     const expected = 15;
     const actual = input.Aggregate(0, add);
 
@@ -13,7 +17,6 @@ describe('Array#prototype#Select', function() {
   });
 
   it('Should sum each number when seed is not supplied', function() {
-    const add = (a, b) => a + b;
     const expected = 15;
     const actual = input.Aggregate(add);
 
