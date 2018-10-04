@@ -4,5 +4,7 @@
  * @returns {boolean}
  */
 function Contains(element) {
-  return this.Contains(element);
+  return this.indexOf(element) === -1 ? false : true;
 }
+
+module.exports = Contains;
