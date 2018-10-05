@@ -5,4 +5,6 @@ interface Array<T> {
   Where<T>(predicate: (X: T) => boolean): Array<T>;
   Except<T, U>(exArr: (Array<U>): Array<U>;
   Distinct<T, U>() => Array<U>;
+  Last<T>(): T;
+  Reverse<T>(): Array<T>;
 }
