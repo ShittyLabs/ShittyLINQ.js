@@ -4,3 +4,7 @@ interface Array<T> {
   Select<T, U>(xform: (x: T) => U): Array<U>;
   Where<T>(predicate: (X: T) => boolean): Array<T>;
 }
+
+interface Array {
+  Empty(): Array<any>;
+}
