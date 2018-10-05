@@ -8,4 +8,5 @@ function OrderBy() {
     if (this === null && typeof this === 'object') throw 'Null value exception!';
     return this.sort();
   }
+  
    module.exports = OrderBy;

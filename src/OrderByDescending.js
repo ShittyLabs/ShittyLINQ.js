@@ -8,4 +8,5 @@ function OrderByDescending() {
     if (this === null && typeof this === 'object') throw 'Null value exception!';
     return this.sort().reverse();
   }
+  
    module.exports = OrderByDescending;
