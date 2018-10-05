@@ -5,7 +5,6 @@ const Select = require('./src/Select');
 const Where = require('./src/Where');
 const OrderBy = require('./src/OrderBy');
 const OrderByDescending = require('./src/OrderByDescending');
-const Reverse = require('./src/Reverse');
 
 const bindAll = function() {
   Array.prototype.Aggregate = Aggregate;
