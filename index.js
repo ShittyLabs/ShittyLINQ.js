@@ -15,7 +15,6 @@ const bindAll = function() {
   Array.prototype.Where = Where;
   Array.prototype.OrderBy = OrderBy;
   Array.prototype.OrderByDescending = OrderByDescending;
-  Array.prototype.Reverse = Reverse;
 };
 
 module.exports = bindAll;
