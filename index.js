@@ -1,6 +1,7 @@
 const Aggregate = require('./src/Aggregate');
 const All = require('./src/All');
 const ElementAt = require('./src/ElementAt');
+const FirstOrDefault = require('./src/FirstOrDefault');
 const Last = require('./src/Last');
 const Prepend = require('./src/Prepend');
 const Reverse = require('./src/Reverse');
@@ -13,6 +14,7 @@ const bindAll = function() {
   Array.prototype.Aggregate = Aggregate;
   Array.prototype.All = All;
   Array.prototype.ElementAt = ElementAt;
+  Array.prototype.FirstOrDefault = FirstOrDefault;
   Array.prototype.Last = Last;
   Array.prototype.Prepend = Prepend;
   Array.prototype.Reverse = Reverse;
