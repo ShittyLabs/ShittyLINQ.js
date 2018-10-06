@@ -1,6 +1,7 @@
 interface Array<T> {
   Aggregate<T, U>(seed: U, accum: (memo: U, val: T) => U): U;
   Aggregate<T>(accum: (memo: T, val: T) => T): T;
+  ElementAt<T>(index: number): T;
   Last<T>(): T;
   Prepend<T>(element: T): Array<T>;
   Reverse<T>(): Array<T>;

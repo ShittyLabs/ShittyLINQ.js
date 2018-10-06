@@ -6,6 +6,7 @@ const Select = require('./src/Select');
 const TakeWhile = require('./src/TakeWhile');
 const Union = require('./src/Union');
 const Where = require('./src/Where');
+const ElementAt = require('./src/ElementAt');
 
 const bindAll = function() {
   Array.prototype.Aggregate = Aggregate;
@@ -16,6 +17,7 @@ const bindAll = function() {
   Array.prototype.TakeWhile = TakeWhile;
   Array.prototype.Union = Union;
   Array.prototype.Where = Where;
+  Array.prototype.ElementAt = ElementAt;
 };
 
 module.exports = bindAll;
