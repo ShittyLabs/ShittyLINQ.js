@@ -4,6 +4,8 @@ interface Array<T> {
   All<T>(predicate: (X: T) => boolean): boolean;
   ElementAt<T>(index: number): T;
   Last<T>(): T;
+  Min<number>(): number;
+  Min<T>(xform: (x: T) => number): T;
   Prepend<T>(element: T): Array<T>;
   Reverse<T>(): Array<T>;
   Select<T, U>(xform: (x: T) => U): Array<U>;
