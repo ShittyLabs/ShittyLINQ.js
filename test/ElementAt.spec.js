@@ -19,4 +19,9 @@ describe('Array#prototype#ElementAt', function() {
   it('Should throw an error when index parameter is equal to the length of the array', function() {
     expect(() => input.ElementAt(3)).to.throw();
   });
+  it('Should return the value at the passed index.', function() {
+    const expected = 1;
+    const actual = input.ElementAt(0);
+    expect(actual).to.eql(expected);
+  });
 });
