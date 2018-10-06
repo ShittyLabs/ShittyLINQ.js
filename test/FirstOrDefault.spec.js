@@ -16,7 +16,6 @@ describe('Array#prototype#First', function() {
   it('Should return undefined when no matching element in array with values', function() {
     const expected = undefined;
     const actual = input.FirstOrDefault(x => x === 1);
-    console.log(actual);
     expect(actual).to.eql(expected);
   });
   it('Should return undefined when no matching element in empty array', function() {
