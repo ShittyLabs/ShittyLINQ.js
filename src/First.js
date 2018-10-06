@@ -8,7 +8,7 @@ function First(predicate) {
   if (predicate) {
     let val = this.find(predicate);
     if (!val) throw 'Sequence contains no matching element';
-    return this.find(val => predicate(val));
+    return val;
   }
   return this[0];
 }
