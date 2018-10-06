@@ -6,4 +6,5 @@ interface Array<T> {
   Reverse<T>(): Array<T>;
   Select<T, U>(xform: (x: T) => U): Array<U>;
   Where<T>(predicate: (X: T) => boolean): Array<T>;
+  Union<T>(adder: Array<T>): Array<T>;
 }
