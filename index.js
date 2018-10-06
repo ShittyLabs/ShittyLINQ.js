@@ -1,5 +1,6 @@
 const Aggregate = require('./src/Aggregate');
 const All = require('./src/All');
+const Any = require('./src/Any');
 const ElementAt = require('./src/ElementAt');
 const Last = require('./src/Last');
 const Prepend = require('./src/Prepend');
@@ -12,6 +13,7 @@ const Where = require('./src/Where');
 const bindAll = function() {
   Array.prototype.Aggregate = Aggregate;
   Array.prototype.All = All;
+  Array.prototype.Any = Any;
   Array.prototype.ElementAt = ElementAt;
   Array.prototype.Last = Last;
   Array.prototype.Prepend = Prepend;
