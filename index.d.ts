@@ -3,6 +3,8 @@ interface Array<T> {
   Aggregate<T>(accum: (memo: T, val: T) => T): T;
   All<T>(predicate: (X: T) => boolean): boolean;
   ElementAt<T>(index: number): T;
+  First<T>(): T;
+  First<T>(predicate: (x: T) => boolean): T;
   Last<T>(): T;
   Prepend<T>(element: T): Array<T>;
   Reverse<T>(): Array<T>;
