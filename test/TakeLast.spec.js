@@ -8,11 +8,11 @@ describe('Array#prototype#TakeLast', function() {
   it('Should take last items', function() {
     const expected = [4, 5, 6];
 
-    const actual = input.TakeLast(input, count);
+    const actual = input.TakeLast(count);
     expect(actual).to.eql(expected);
   });
 
   it('Should throw an error when list has not enough items', function() {
-    expect(() => input.TakeLast([], count)).to.throw();
+    expect(() => input.TakeLast(input.length + 1)).to.throw();
   });
 });

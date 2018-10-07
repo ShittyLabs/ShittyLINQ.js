@@ -1,14 +1,14 @@
 /**
  * @template T
  * @template U
- * @param {Array<T>} list
  * @param {U} count
  * @returns {Array<T>}
+ * @this {Array<T>}
  */
-function TakeLast(list, count) {
-  if (list.length < count) throw 'Array has not enough elements';
+function TakeLast(count) {
+  if (this.length < count) throw 'Array has not enough elements';
 
-  return list.slice(-count);
+  return this.slice(-count);
 }
 
 module.exports = TakeLast;
