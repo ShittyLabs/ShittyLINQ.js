@@ -18,4 +18,14 @@ describe('Array#prototype#Any', function() {
     const actual = input.Any(x => x.age > 41);
     expect(actual).to.eql(expected);
   });
+  it('Should return false if no elements in array', function() {
+    const expected = false;
+    const actual = [].Any();
+    expect(actual).to.eql(expected);
+  });
+  it('Should return true if elements in array with no predicate', function() {
+    const expected = true;
+    const actual = input.Any();
+    expect(actual).to.eql(expected);
+  });
 });
