@@ -3,7 +3,8 @@ interface Array<T> {
   Aggregate<T>(accum: (memo: T, val: T) => T): T;
   All<T>(predicate: (X: T) => boolean): boolean;
   Concat<T>(list: Array<T>)  : Array<T>;
-  Count<number>(): number;
+  Count<T>(): number;
+  Count<T>(predicate: (X: T) => boolean): number;
   ElementAt<T>(index: number): T;
   First<T>(): T;
   First<T>(predicate: (x: T) => boolean): T;
