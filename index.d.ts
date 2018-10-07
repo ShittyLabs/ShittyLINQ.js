@@ -4,7 +4,7 @@ interface Array<T> {
   All<T>(predicate: (X: T) => boolean): boolean;
   ElementAt<T>(index: number): T;
   FirstOrDefault<T>(): T;
-  FirstOrDefault<T>(predicate: boolean): T;
+  FirstOrDefault<T>(pedicate: (x: T) => boolean): T;
   Last<T>(): T;
   Prepend<T>(element: T): Array<T>;
   Reverse<T>(): Array<T>;

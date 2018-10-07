@@ -14,13 +14,11 @@ describe('Array#prototype#First', function() {
     expect(actual).to.eql(expected);
   });
   it('Should return undefined when no matching element in array with values', function() {
-    const expected = undefined;
     const actual = input.FirstOrDefault(x => x === 1);
-    expect(actual).to.eql(expected);
+    expect(actual).to.be.undefined;
   });
   it('Should return undefined when no matching element in empty array', function() {
-    const expected = undefined;
     const actual = [].FirstOrDefault();
-    expect(actual).to.eql(expected);
+    expect(actual).to.be.undefined;
   });
 });
