@@ -12,6 +12,8 @@ interface Array<T> {
   ElementAt<T>(index: number): T;
   First<T>(): T;
   First<T>(predicate: (x: T) => boolean): T;
+  FirstOrDefault<T>(): T;
+  FirstOrDefault<T>(pedicate: (x: T) => boolean): T;
   GroupJoin<T, U, V, K>(
     inner: Array<U>,
     outerKeySelector: ((x: T) => K),
