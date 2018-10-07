@@ -13,6 +13,7 @@ const TakeWhile = require('./src/TakeWhile');
 const ToDictionary = require('./src/ToDictionary');
 const Union = require('./src/Union');
 const Where = require('./src/Where');
+const Empty = require('./src/Empty')
 
 const bindAll = function() {
   Array.prototype.Aggregate = Aggregate;
@@ -20,6 +21,7 @@ const bindAll = function() {
   Array.prototype.Concat = Concat;
   Array.prototype.Count = Count;
   Array.prototype.ElementAt = ElementAt;
+  Array.Empty = Empty;
   Array.prototype.First = First;
   Array.prototype.Last = Last;
   Array.prototype.Prepend = Prepend;

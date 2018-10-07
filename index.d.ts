@@ -17,3 +17,7 @@ interface Array<T> {
   Union<T>(adder: Array<T>): Array<T>;
   Where<T>(predicate: (X: T) => boolean): Array<T>;
 }
+
+interface Array {
+  Empty(): Array<any>;
+}
