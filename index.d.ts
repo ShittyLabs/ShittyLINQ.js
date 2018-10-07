@@ -24,6 +24,8 @@ interface Array<T> {
     equalityComparer: IEqualityComparer<T>
   );
   Last<T>(): T;
+  Min<number>(): number;
+  Min<T>(xform: (x: T) => number): T;
   Max<number>(): number;
   Max<T>(xform: (x: T) => number): T;
   Prepend<T>(element: T): Array<T>;
