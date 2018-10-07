@@ -4,6 +4,8 @@ interface Array<T> {
   Aggregate<T, U>(seed: U, accum: (memo: U, val: T) => U): U;
   Aggregate<T>(accum: (memo: T, val: T) => T): T;
   All<T>(predicate: (X: T) => boolean): boolean;
+  Any<T>(): boolean;
+  Any<T>(predicate: (X: T) => boolean): boolean;
   Concat<T>(list: Array<T>)  : Array<T>;
   Count<T>(): number;
   Count<T>(predicate: (X: T) => boolean): number;

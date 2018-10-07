@@ -1,5 +1,6 @@
 const Aggregate = require('./src/Aggregate');
 const All = require('./src/All');
+const Any = require('./src/Any');
 const Concat = require('./src/Concat');
 const Count = require('./src/Count');
 const ElementAt = require('./src/ElementAt');
@@ -22,6 +23,7 @@ const Where = require('./src/Where');
 const bindAll = function() {
   Array.prototype.Aggregate = Aggregate;
   Array.prototype.All = All;
+  Array.prototype.Any = Any;
   Array.prototype.Concat = Concat;
   Array.prototype.Count = Count;
   Array.prototype.ElementAt = ElementAt;
