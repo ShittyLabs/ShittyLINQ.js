@@ -6,7 +6,7 @@
 function First(predicate) {
   if (!this.length) throw 'Sequence contains no elements';
   if (predicate) {
-    let val = this.find(predicate);
+    const val = this.find(predicate);
     if (!val) throw 'Sequence contains no matching element';
     return val;
   }
