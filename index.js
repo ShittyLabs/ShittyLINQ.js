@@ -7,6 +7,7 @@ const Empty = require('./src/Empty')
 const First = require('./src/First');
 const GroupJoin = require('./src/GroupJoin');
 const Last = require('./src/Last');
+const Max = require('./src/Max');
 const Prepend = require('./src/Prepend');
 const Reverse = require('./src/Reverse');
 const Select = require('./src/Select');
@@ -27,6 +28,7 @@ const bindAll = function() {
   Array.prototype.First = First;
   Array.prototype.GroupJoin = GroupJoin;
   Array.prototype.Last = Last;
+  Array.prototype.Max = Max;
   Array.prototype.Prepend = Prepend;
   Array.prototype.Reverse = Reverse;
   Array.prototype.Select = Select;
@@ -36,6 +38,7 @@ const bindAll = function() {
   Array.prototype.ToDictionary = ToDictionary;
   Array.prototype.Union = Union;
   Array.prototype.Where = Where;
+  Array.prototype.ElementAt = ElementAt;
 };
 
 module.exports = bindAll;

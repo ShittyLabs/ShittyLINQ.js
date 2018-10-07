@@ -24,6 +24,8 @@ interface Array<T> {
     equalityComparer: IEqualityComparer<T>
   );
   Last<T>(): T;
+  Max<number>(): number;
+  Max<T>(xform: (x: T) => number): T;
   Prepend<T>(element: T): Array<T>;
   Reverse<T>(): Array<T>;
   Select<T, U>(xform: (x: T) => U): Array<U>;
