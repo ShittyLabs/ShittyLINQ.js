@@ -17,7 +17,6 @@ const TakeWhile = require('./src/TakeWhile');
 const ToDictionary = require('./src/ToDictionary');
 const Union = require('./src/Union');
 const Where = require('./src/Where');
-const ElementAt = require('./src/ElementAt');
 
 const bindAll = function() {
   Array.prototype.Aggregate = Aggregate;
