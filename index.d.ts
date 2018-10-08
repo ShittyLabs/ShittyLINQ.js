@@ -42,6 +42,7 @@ interface Array<T> {
   Contains<T>(element: T): boolean;
   SkipWhile<T>(predicate: (X: T) => boolean): Array<T>;
   Except<T, U>(xform: (x: T) => U): Array<U>;
+  Distinct<T>(): Array<T>;
 }
 
 interface Array {

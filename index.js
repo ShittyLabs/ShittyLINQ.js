@@ -22,6 +22,7 @@ const Union = require('./src/Union');
 const Where = require('./src/Where');
 const Contains = require('./src/Contains');
 const Except = require('./src/Except');
+const Distinct = require('./src/Distinct');
 
 const bindAll = function() {
   Array.prototype.Aggregate = Aggregate;
@@ -49,6 +50,7 @@ const bindAll = function() {
   Array.prototype.Contains = Contains;
   Array.prototype.ElementAt = ElementAt;
   Array.prototype.Except = Except;
+  Array.prototype.Distinct = Distinct;
 };
 
 module.exports = bindAll;
