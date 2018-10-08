@@ -21,6 +21,7 @@ const ToDictionary = require('./src/ToDictionary');
 const Union = require('./src/Union');
 const Where = require('./src/Where');
 const Contains = require('./src/Contains');
+const Except = require('./src/Except');
 
 const bindAll = function() {
   Array.prototype.Aggregate = Aggregate;
@@ -47,6 +48,7 @@ const bindAll = function() {
   Array.prototype.Where = Where;
   Array.prototype.Contains = Contains;
   Array.prototype.ElementAt = ElementAt;
+  Array.prototype.Except = Except;
 };
 
 module.exports = bindAll;
