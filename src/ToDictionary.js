@@ -1,24 +1,26 @@
 /**
  * @template T
- * @param {U} indexKey [Optional]
- * @returns T
+ * @template TKey
+ * @template TElement
+ * @param {((x: T) => TKey)} keySelector
+ * @param {((x: T) => TElement)} elementSelector
+ * @returns {Object.<TKey, TElement>}
  */
+function ToDictionary(keySelector, elementSelector) {
+  if (keySelector == null)
+    throw 'Argument Null Exception - keySelector is null.';
+  if (elementSelector == null)
+    throw 'Argument Null Exception - elementSelector is null.';
+  return this.reduce((acc, e) => {
+    var key = keySelector(e);
+    if (key == null)
+      throw 'Argument Null Exception - keySelector produces a key that is null.';
+    if (key in acc)
+      throw 'Argument Exception - keySelector produces duplicate keys for two elements.';
 
-function ToDictionary(indexKey) {
-  const array = this;
-  if (indexKey === null || indexKey === undefined || indexKey === '')
-    indexKey = 'id'; //used default ie 'id'.
-  if (!Array.isArray(array))
-    throw 'Cannot convert a non-array value to dictionary.';
-
-  const normalizedObject = {};
-  for (let i = 0; i < array.length; i++) {
-    if (array[i][indexKey] === undefined)
-      throw 'Given parameter Key not found in array';
-    const key = array[i][indexKey];
-    normalizedObject[key] = array[i];
-  }
-  return normalizedObject;
+    acc[keySelector(e)] = elementSelector(e);
+    return acc;
+  }, {});
 }
 
 module.exports = ToDictionary;
