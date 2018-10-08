@@ -6,7 +6,7 @@ interface Array<T> {
   All<T>(predicate: (X: T) => boolean): boolean;
   Any<T>(): boolean;
   Any<T>(predicate: (X: T) => boolean): boolean;
-  Concat<T>(list: Array<T>)  : Array<T>;
+  Concat<T>(list: Array<T>): Array<T>;
   Count<T>(): number;
   Count<T>(predicate: (X: T) => boolean): number;
   ElementAt<T>(index: number): T;
@@ -39,6 +39,7 @@ interface Array<T> {
   TakeWhile<T>(predicate: (X: T) => boolean): Array<T>;
   Union<T>(adder: Array<T>): Array<T>;
   Where<T>(predicate: (X: T) => boolean): Array<T>;
+  Contains<T>(element: T): boolean;
   SkipWhile<T>(predicate: (X: T) => boolean): Array<T>;
 }
 

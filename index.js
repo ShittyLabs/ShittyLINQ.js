@@ -5,7 +5,7 @@ const Concat = require('./src/Concat');
 const Count = require('./src/Count');
 const ElementAt = require('./src/ElementAt');
 const FirstOrDefault = require('./src/FirstOrDefault');
-const Empty = require('./src/Empty')
+const Empty = require('./src/Empty');
 const First = require('./src/First');
 const GroupJoin = require('./src/GroupJoin');
 const Last = require('./src/Last');
@@ -20,6 +20,7 @@ const TakeWhile = require('./src/TakeWhile');
 const ToDictionary = require('./src/ToDictionary');
 const Union = require('./src/Union');
 const Where = require('./src/Where');
+const Contains = require('./src/Contains');
 
 const bindAll = function() {
   Array.prototype.Aggregate = Aggregate;
@@ -44,6 +45,7 @@ const bindAll = function() {
   Array.prototype.ToDictionary = ToDictionary;
   Array.prototype.Union = Union;
   Array.prototype.Where = Where;
+  Array.prototype.Contains = Contains;
   Array.prototype.ElementAt = ElementAt;
 };
 

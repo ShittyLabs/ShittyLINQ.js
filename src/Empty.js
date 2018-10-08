@@ -3,7 +3,7 @@
  * @returns {Array}
  */
 function Empty() {
-    return [];
+  return [];
 }
 
 module.exports = Empty;
