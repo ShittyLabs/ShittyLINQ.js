@@ -45,4 +45,5 @@ interface Array<T> {
 
 interface Array {
   Empty(): Array<any>;
+  Repeat<T>(element: T, count: Number): Array<T>;
 }
