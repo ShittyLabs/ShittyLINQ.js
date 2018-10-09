@@ -39,6 +39,7 @@ interface Array<T> {
   TakeWhile<T>(predicate: (X: T) => boolean): Array<T>;
   Union<T>(adder: Array<T>): Array<T>;
   Where<T>(predicate: (X: T) => boolean): Array<T>;
+  Single<T>(predicate: (X: T) => boolean): T;
   Contains<T>(element: T): boolean;
   SkipWhile<T>(predicate: (X: T) => boolean): Array<T>;
 }

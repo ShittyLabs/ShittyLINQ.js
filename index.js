@@ -20,6 +20,7 @@ const TakeWhile = require('./src/TakeWhile');
 const ToDictionary = require('./src/ToDictionary');
 const Union = require('./src/Union');
 const Where = require('./src/Where');
+const Single = require('./src/Single');
 const Contains = require('./src/Contains');
 const Repeat = require('./src/Repeat');
 
@@ -46,6 +47,7 @@ const bindAll = function() {
   Array.prototype.ToDictionary = ToDictionary;
   Array.prototype.Union = Union;
   Array.prototype.Where = Where;
+  Array.prototype.Single = Single;
   Array.prototype.Contains = Contains;
   Array.prototype.ElementAt = ElementAt;
   Array.Repeat = Repeat;
