@@ -39,6 +39,10 @@ interface Array<T> {
   Select<T, U>(xform: (x: T) => U): Array<U>;
   Sum<number>(): number;
   TakeWhile<T>(predicate: (X: T) => boolean): Array<T>;
+  ToDictionary<T, U, V>(
+    keySelector: ((x: T) => U),
+    elementSelector: ((x: T) => V)
+  ): Dictionary<U, V>;
   Union<T>(adder: Array<T>): Array<T>;
   Where<T>(predicate: (X: T) => boolean): Array<T>;
   Single<T>(predicate: (X: T) => boolean): T;
@@ -49,4 +53,8 @@ interface Array<T> {
 interface Array {
   Empty(): Array<any>;
   Repeat<T>(element: T, count: Number): Array<T>;
+}
+
+interface Dictionary<U, V> {
+  [x: U]: V;
 }
