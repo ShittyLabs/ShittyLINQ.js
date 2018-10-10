@@ -6,6 +6,8 @@ interface Array<T> {
   All<T>(predicate: (X: T) => boolean): boolean;
   Any<T>(): boolean;
   Any<T>(predicate: (X: T) => boolean): boolean;
+  Average<number>(): number;
+  Average<T>(xform: (x: T) => number): number;
   Concat<T>(list: Array<T>): Array<T>;
   Count<T>(): number;
   Count<T>(predicate: (X: T) => boolean): number;
