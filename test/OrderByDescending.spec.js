@@ -2,40 +2,28 @@ const expect = require('chai').expect;
 require('..')();
 describe('Array#prototype#Reverse', function () {
 
-    it('Should return sorted string elements', function () {
-        const inputAlpha = ["a", "c", "d", "b"];
-        const expectedAlpha = ["d", "c", "b", "a"];
-        const actualAlpha = inputAlpha.OrderByDescending();
-        expect(actualAlpha).to.eql(expectedAlpha);
+    it('Should return sorted based on provided key for all same types', function () {
+        const inputSameType = [{ x: 3, y: 9 },{ x: 2, y: 4 }];
+        const expectedSameType = [{ x: 3, y: 9 }, { x: 2, y: 4 }];
+        const actualSameType = inputSameType.OrderByDescending(x);
+        expect(actualSameType).to.eql(expectedSameType);
     });
-    it('Should return sorted consectutive elements', function () {
-        const inputRand = [1, 3, 2, 5, 4];
-        const expectedRand = [5, 4, 3, 2, 1];
-        const actualRand = inputRand.OrderByDescending();
-        expect(actualRand).to.eql(expectedRand);
+    it('Should return sorted based on provided key for mixed types', function () {
+        const inputMixedType = [{ x: 1, y: 'a' },{ x: 6, y: 'b' }];
+        const expectedMixedType = [{ x: 6, y: 'b' }, { x: 1, y: 'a' }];
+        const actualMixedType = inputMixedType.OrderByDescending(y);
+        expect(actualMixedType).to.eql(expectedMixedType);
     });
-    it('Should return sorted non-consectutive elements', function () {
-        const inputRandNonConsec = [1, 10, 20, 11];
-        const expectedRandNonConsec = [20, 11, 10, 1];
-        const actualRandNonConsec = inputRandNonConsec.OrderByDescending();
-        expect(actualRandNonConsec).to.eql(expectedRandNonConsec);
-    });
-    it('Should return sorted array the same elements', function () {
-        const inputAllSame = [1, 1, 1];
-        const expectedAllSame = [1, 1, 1];
-        const actualAllSame = inputAllSame.OrderByDescending();
-        expect(actualAllSame).to.eql(expectedAllSame);
-    });
-    it('Should return sorted array of one element', function () {
-        const inputOneEle = [1];
-        const expectedOneEle = [1];
-        const actualOneEle = inputOneEle.OrderByDescending();
+    it('Should return input as output for one element', function () {
+        const inputOneEle = [{ x: 3}];
+        const expectedOneEle = [{ x: 3}];
+        const actualOneEle = inputOneEle.OrderByDescending(y);
         expect(actualOneEle).to.eql(expectedOneEle);
     });
     it('Should throw an error when input is null', function () {
-        expect(() => null.OrderByDescending()).to.throw();
+        expect(() => null.OrderByDescending(x)).to.throw();
     });
     it('Should throw an error when input is undefined', function () {
-        expect(() => undefined.OrderByDescending()).to.throw();
+        expect(() => undefined.OrderByDescending(x)).to.throw();
     });
 });
