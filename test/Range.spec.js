@@ -12,12 +12,12 @@ describe('Array#Range', function() {
   });
 
   it('Should throw error when "start" is a non-integer', function() {
-    expect(Array.range(1.2)).to.throw();
-    expect(Array.range('a')).to.throw();
+    expect(() => Array.Range(1.2)).to.throw();
+    expect(() => Array.Range('a')).to.throw();
   });
 
   it('Should throw error when "count" is a non-integer', function() {
-    expect(Array.range(1, 1.2)).to.throw();
-    expect(Array.range(1, 'a')).to.throw();
+    expect(() => Array.Range(1, 1.2)).to.throw();
+    expect(() => Array.Range(1, 'a')).to.throw();
   });
 });
