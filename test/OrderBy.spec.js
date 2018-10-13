@@ -15,13 +15,6 @@ describe('Array#prototype#OrderBy', function() {
     expect(actualNoKey).to.eql(expectedNoKey);
   });
 
-  it('Should return sorted in reversed order', function() {
-    const inputReverseCompare = [4, 2, 1, 3];
-    const expectedReverseCompare = [4, 3, 2, 1];
-    const actualReverseCompare = inputReverseCompare.OrderBy(x => x, -1);
-    expect(actualReverseCompare).to.eql(expectedReverseCompare);
-  });
-
   it('Should return sorted based on provided key for mixed types', function() {
     const inputMixedType = [{ v1: 2, v2: 'b' }, { v1: 3, v2: 'a' }];
     const expectedMixedType = [{ v1: 3, v2: 'a' }, { v1: 2, v2: 'b' }];
@@ -33,5 +26,8 @@ describe('Array#prototype#OrderBy', function() {
   });
   it('Should throw an error when input is undefined', function() {
     expect(() => undefined.OrderBy(x => x)).to.throw();
+  });
+  it('Should throw an error when keySelector is null', function() {
+    expect(() => undefined.OrderBy(null)).to.throw();
   });
 });

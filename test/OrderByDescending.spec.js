@@ -19,16 +19,14 @@ describe('Array#prototype#OrderByDescending', function() {
     const actualNoKey = inputNoKey.OrderBy(x => x);
     expect(actualNoKey).to.eql(expectedNoKey);
   });
-  it('Should return sorted in reversed order', function() {
-    const inputReverseCompare = [4, 2, 1, 3];
-    const expectedReverseCompare = [1, 2, 3, 4];
-    const actualReverseCompare = inputReverseCompare.OrderBy(x => x, -1);
-    expect(actualReverseCompare).to.eql(expectedReverseCompare);
-  });
   it('Should throw an error when input is null', function() {
     expect(() => null.OrderByDescending(x)).to.throw();
   });
   it('Should throw an error when input is undefined', function() {
     expect(() => undefined.OrderByDescending(x)).to.throw();
+  });
+
+  it('Should throw an error when keySelector is null', function() {
+    expect(() => undefined.OrderByDescending(null)).to.throw();
   });
 });
