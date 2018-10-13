@@ -1,4 +1,16 @@
 /**
+ * Adds two numbers.
+ *
+ * @param {number} a
+ * @param {number} b
+ * @returns {number}
+ * @private
+ */
+function _add(a, b) {
+  return a + b;
+}
+
+/**
  * Returns an array of integers beginning with `start` and
  * going for `count`.
  *
@@ -16,9 +28,7 @@ function Range(start, count) {
     throw '"count" must be an integer';
   }
   const emptyArray = new Array(count);
-  return emptyArray.map((value, index) => {
-    return index + start;
-  });
+  return emptyArray.fill(start).map(_add);
 }
 
 module.exports = Range;
