@@ -52,6 +52,7 @@ interface Array<T> {
 
 interface ArrayConstructor {
   Empty(): Array<any>;
+  Range(start: number, count: number): Array<number>;
   Repeat<T>(element: T, count: Number): Array<T>;
 }
 
