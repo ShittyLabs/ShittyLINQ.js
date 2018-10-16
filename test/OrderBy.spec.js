@@ -21,6 +21,14 @@ describe('Array#prototype#OrderBy', function() {
     const actualMixedType = inputMixedType.OrderBy(x => x.v2);
     expect(actualMixedType).to.eql(expectedMixedType);
   });
+  it('Should return sorted based on custom compare function', function() {
+    const inputNoKey = [3, 4, 2, 1];
+    const expectedNoKey = [4, 3, 2, 1];
+    const actualNoKey = inputNoKey.OrderBy(x => x, function(a, b) {
+      return b - a;
+    });
+    expect(actualNoKey).to.eql(expectedNoKey);
+  });
   it('Should throw an error when input is null', function() {
     expect(() => null.OrderBy(x => x)).to.throw();
   });

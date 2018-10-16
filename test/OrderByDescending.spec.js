@@ -16,7 +16,15 @@ describe('Array#prototype#OrderByDescending', function() {
   it('Should return sorted if no keys in list', function() {
     const inputNoKey = [3, 4, 2, 1];
     const expectedNoKey = [4, 3, 2, 1];
-    const actualNoKey = inputNoKey.OrderBy(x => x);
+    const actualNoKey = inputNoKey.OrderByDescending(x => x);
+    expect(actualNoKey).to.eql(expectedNoKey);
+  });
+  it('Should return sorted based on custom compare function', function() {
+    const inputNoKey = [3, 4, 2, 1];
+    const expectedNoKey = [1, 2, 3, 4];
+    const actualNoKey = inputNoKey.OrderByDescending(x => x, function(a, b) {
+      return a - b;
+    });
     expect(actualNoKey).to.eql(expectedNoKey);
   });
   it('Should throw an error when input is null', function() {
