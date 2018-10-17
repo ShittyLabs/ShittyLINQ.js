@@ -1,7 +1,6 @@
 /**
  * @template T
- * @template U
- * @param {U} count
+ * @param {number} count
  * @returns {Array<T>}
  * @this {Array<T>}
  */
