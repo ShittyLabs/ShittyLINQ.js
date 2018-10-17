@@ -1,6 +1,6 @@
 {
   "name": "shittylinq",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "precommit": "lint-staged"
   },
   "lint-staged": {
-    "*.js": [
+    "*.js|*.ts": [
       "prettier --write",
       "git add"
     ]
