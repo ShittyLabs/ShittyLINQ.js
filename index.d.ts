@@ -37,6 +37,7 @@ interface Array<T> {
   Prepend<T>(element: T): Array<T>;
   Reverse<T>(): Array<T>;
   Select<T, U>(xform: (x: T) => U): Array<U>;
+  TakeLast<T>(count: number): Array<T>;
   Sum(): number;
   TakeWhile<T>(predicate: (x: T) => boolean): Array<T>;
   ToDictionary<T, U, V>(
