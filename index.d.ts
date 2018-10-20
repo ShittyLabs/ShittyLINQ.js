@@ -34,6 +34,10 @@ interface Array<T> {
   Min<T>(xform: (x: T) => number): T;
   Max(): number;
   Max<T>(xform: (x: T) => number): T;
+  OrderBy<T, K>(keySelector: ((x: T) => K)): Array<T>;
+  OrderBy<T, K>(keySelector: ((x: T) => K), comparer: ((x: K, y: K) => number)): Array<T>;
+  OrderByDescending<T, K>(keySelector: ((x: T) => K)): Array<T>;
+  OrderByDescending<T, K>(keySelector: ((x: T) => K), comparer: ((x: K, y: K) => number)): Array<T>;
   Prepend<T>(element: T): Array<T>;
   Reverse<T>(): Array<T>;
   Select<T, U>(xform: (x: T) => U): Array<U>;
