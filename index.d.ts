@@ -35,15 +35,22 @@ interface Array<T> {
   Max(): number;
   Max<T>(xform: (x: T) => number): T;
   OrderBy<T, K>(keySelector: ((x: T) => K)): Array<T>;
-  OrderBy<T, K>(keySelector: ((x: T) => K), comparer: ((x: K, y: K) => number)): Array<T>;
+  OrderBy<T, K>(
+    keySelector: ((x: T) => K),
+    comparer: ((x: K, y: K) => number)
+  ): Array<T>;
   OrderByDescending<T, K>(keySelector: ((x: T) => K)): Array<T>;
-  OrderByDescending<T, K>(keySelector: ((x: T) => K), comparer: ((x: K, y: K) => number)): Array<T>;
+  OrderByDescending<T, K>(
+    keySelector: ((x: T) => K),
+    comparer: ((x: K, y: K) => number)
+  ): Array<T>;
   Prepend<T>(element: T): Array<T>;
   Reverse<T>(): Array<T>;
   Select<T, U>(xform: (x: T) => U): Array<U>;
   Take<T>(count: number): Array<T>;
   TakeLast<T>(count: number): Array<T>;
   Sum(): number;
+  Sum(predicate: (x: T) => number): number;
   TakeWhile<T>(predicate: (x: T) => boolean): Array<T>;
   ToDictionary<T, U, V>(
     keySelector: ((x: T) => U),
