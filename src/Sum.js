@@ -7,7 +7,7 @@ const _ = require('lodash');
  * @returns {number}
  */
 function _predicateSum(array, predicate) {
-  let predicateResult = _.map(array, predicate);
+  let predicateResult = array.map(predicate);
   return predicateResult.Sum();
 }
 
