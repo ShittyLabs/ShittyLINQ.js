@@ -28,4 +28,8 @@ describe('Array#prototype#Sum', () => {
     const actual = input.Sum(square);
     expect(actual).to.eql(expected);
   });
+
+  it('should throw error if predicate is not a function', () => {
+    expect(() => input.Sum(input)).to.throw('"predicate" must be a function');
+  });
 });

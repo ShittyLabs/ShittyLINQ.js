@@ -1,5 +1,3 @@
-const _ = require('lodash');
-
 /**
  * @template T
  * @param {Array<T>} array
@@ -21,7 +19,7 @@ function _predicateSum(array, predicate) {
  */
 function Sum(predicate) {
   if (predicate) {
-    if (!_.isFunction(predicate)) {
+    if (!(predicate instanceof Function)) {
       throw new Error('"predicate" must be a function');
     }
     return _predicateSum(this, predicate);
