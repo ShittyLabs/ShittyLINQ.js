@@ -8,16 +8,16 @@ function _predicateSum(array, predicate) {
   let predicateResult = array.map(predicate);
   return predicateResult.Sum();
 }
-
 /**
- * @template number?
- * @returns {number}
- /**
  * @template T
  * @param {((x: T) => number)} predicate
  * @returns {number}
  */
-function Sum(predicate) {
+
+/**
+ * @template number?
+ * @returns {number}
+ */ function Sum(predicate) {
   if (predicate) {
     if (!(predicate instanceof Function)) {
       throw new Error('"predicate" must be a function');
