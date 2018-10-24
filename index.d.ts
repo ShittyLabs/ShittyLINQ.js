@@ -61,6 +61,7 @@ interface Array<T> {
   Single<T>(predicate: (x: T) => boolean): T;
   Contains<T>(element: T): boolean;
   SkipWhile<T>(predicate: (x: T) => boolean): Array<T>;
+  SequenceEqual<T>(second: Array<T>): boolean;
 }
 
 interface ArrayConstructor {
