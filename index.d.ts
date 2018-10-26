@@ -61,6 +61,7 @@ interface Array<T> {
   Single<T>(predicate: (x: T) => boolean): T;
   Contains<T>(element: T): boolean;
   SkipWhile<T>(predicate: (x: T) => boolean): Array<T>;
+  Zip<U, T, K>(second: Array<T>, applyFn: (x: U, y: T) => K): Array<K>;
 }
 
 interface ArrayConstructor {
