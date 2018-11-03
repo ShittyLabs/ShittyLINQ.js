@@ -1,28 +1,28 @@
 /**
  * @template T
  * @param {Array<T>} array
- * @param {((x: T) => number)} predicate
+ * @param {((x: T) => number)} selector
  * @returns {number}
  */
-function _predicateSum(array, predicate) {
-  let predicateResult = array.map(predicate);
+function _selectorSum(array, selector) {
+  let predicateResult = array.map(selector);
   return predicateResult.Sum();
 }
 /**
  * @template T
- * @param {((x: T) => number)} predicate
+ * @param {((x: T) => number)} selector
  * @returns {number}
  */
 
 /**
  * @template number?
  * @returns {number}
- */ function Sum(predicate) {
-  if (predicate) {
-    if (!(predicate instanceof Function)) {
-      throw new Error('"predicate" must be a function');
+ */ function Sum(selector) {
+  if (selector) {
+    if (!(selector instanceof Function)) {
+      throw new Error('"selector" must be a function');
     }
-    return _predicateSum(this, predicate);
+    return _selectorSum(this, selector);
   } else {
     let sum = 0;
     for (let x of this) {

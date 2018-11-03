@@ -50,7 +50,7 @@ interface Array<T> {
   Take<T>(count: number): Array<T>;
   TakeLast<T>(count: number): Array<T>;
   Sum(): number;
-  Sum(predicate: (x: T) => number): number;
+  Sum(selector: (x: T) => number): number;
   TakeWhile<T>(predicate: (x: T) => boolean): Array<T>;
   ToDictionary<T, U, V>(
     keySelector: ((x: T) => U),

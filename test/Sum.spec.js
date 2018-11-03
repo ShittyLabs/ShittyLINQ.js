@@ -29,7 +29,7 @@ describe('Array#prototype#Sum', () => {
     expect(actual).to.eql(expected);
   });
 
-  it('should throw error if predicate is not a function', () => {
-    expect(() => input.Sum(input)).to.throw('"predicate" must be a function');
+  it('should throw error if selector is not a function', () => {
+    expect(() => input.Sum(input)).to.throw('"selector" must be a function');
   });
 });
