@@ -35,6 +35,12 @@ interface Array<T> {
     inner: TInner[],
     outerKeySelector: (x: TOuter) => TKey,
     innerKeySelector: (x: TInner) => TKey,
+    xform: (x: TOuter, y: TInner) => TResult
+  ): TResult[];
+  Join<TOuter, TInner, TKey, TResult>(
+    inner: TInner[],
+    outerKeySelector: (x: TOuter) => TKey,
+    innerKeySelector: (x: TInner) => TKey,
     xform: (x: TOuter, y: TInner) => TResult,
     equalityComparer: (x: TKey, y: TKey) => boolean
   ): TResult[];
