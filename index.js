@@ -30,6 +30,7 @@ const TakeWhile = require('./src/TakeWhile');
 const ToDictionary = require('./src/ToDictionary');
 const Union = require('./src/Union');
 const Where = require('./src/Where');
+const Zip = require('./src/Zip');
 
 const bindAll = function() {
   Array.prototype.Aggregate = Aggregate;
@@ -64,6 +65,7 @@ const bindAll = function() {
   Array.prototype.ToDictionary = ToDictionary;
   Array.prototype.Union = Union;
   Array.prototype.Where = Where;
+  Array.prototype.Zip = Zip;
 };
 
 module.exports = bindAll;
