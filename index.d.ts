@@ -31,6 +31,13 @@ interface Array<T> {
     equalityComparer: IEqualityComparer<T>
   );
   Last<T>(): T;
+  Join<TOuter, TInner, TKey, TResult>(
+    inner: TInner[],
+    outerKeySelector: (x: TOuter) => TKey,
+    innerKeySelector: (x: TInner) => TKey,
+    xform: (x: TOuter, y: TInner) => TResult,
+    equalityComparer: (x: TKey, y: TKey) => boolean
+  ): TResult[];
   Min(): number;
   Min<T>(xform: (x: T) => number): T;
   Max(): number;
