@@ -9,6 +9,7 @@ interface Array<T> {
   Average(): number;
   Average<T>(xform: (x: T) => number): number;
   Concat<T>(list: Array<T>): Array<T>;
+  Contains<T>(element: T): boolean;
   Count<T>(): number;
   Count<T>(predicate: (x: T) => boolean): number;
   ElementAt<T>(index: number): T;
@@ -59,7 +60,7 @@ interface Array<T> {
   Union<T>(adder: Array<T>): Array<T>;
   Where<T>(predicate: (x: T) => boolean): Array<T>;
   Single<T>(predicate: (x: T) => boolean): T;
-  Contains<T>(element: T): boolean;
+  SequenceEqual<T>(second: Array<T>): boolean;
   SkipWhile<T>(predicate: (x: T) => boolean): Array<T>;
   Zip<U, T, K>(second: Array<T>, applyFn: (x: U, y: T) => K): Array<K>;
 }
