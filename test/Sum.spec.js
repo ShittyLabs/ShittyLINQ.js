@@ -4,6 +4,9 @@ require('..')();
 describe('Array#prototype#Sum', () => {
   const input = [1, 2, 3];
   const input_with_null = [1, 2, null, 3];
+  const square = function(x) {
+    return x * x;
+  };
 
   it('should display the correct sum', () => {
     const expected = input.reduce((prev, x) => x + prev);
@@ -17,5 +20,16 @@ describe('Array#prototype#Sum', () => {
 
     const actual = input_with_null.Sum();
     expect(actual).to.eql(expected);
+  });
+
+  it('should square the numbers and add them when passed the square function', () => {
+    const expected = input.reduce((prev, x) => Math.pow(x, 2) + prev);
+
+    const actual = input.Sum(square);
+    expect(actual).to.eql(expected);
+  });
+
+  it('should throw error if selector is not a function', () => {
+    expect(() => input.Sum(input)).to.throw('"selector" must be a function');
   });
 });
