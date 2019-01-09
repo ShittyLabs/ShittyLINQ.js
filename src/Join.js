@@ -1,12 +1,4 @@
-/**
- * @template A
- * @template B
- * @template C
- * @typedef {((x: A, y: B) => C)} Func
- * @typedef {((x: A) => B)} Func
- */
-
-const _defaultEqualityComparer = (a, b) => a === b;
+const _defaultEqualityComparer = require('./.internal/_defaultEqualityComparer');
 
 /**
  * @template TOuter

@@ -1,11 +1,11 @@
 /**
  * @template T
  * @template U
- * @param {((x: T) => U)} xform
- * @returns {Array<U>}
+ * @param {Array<U>} inner
+ * @returns {Array<T|U>}
  */
-function Union(adder) {
-  return [...new Set([...this, ...adder])];
+function Union(inner) {
+  return [...new Set([...this, ...inner])];
 }
 
 module.exports = Union;

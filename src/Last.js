@@ -1,6 +1,5 @@
 /**
  * @template T
- * @param None
  * @returns T
  */
 

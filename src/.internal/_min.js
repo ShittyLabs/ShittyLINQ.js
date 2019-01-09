@@ -3,7 +3,8 @@
  * @param {T} a
  * @param {T} b
  * @returns {T}
+ * @private
  */
-module.exports = function(a, b) {
+module.exports = function _min(a, b) {
   return a < b ? a : b;
 };

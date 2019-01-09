@@ -1,4 +1,3 @@
-const _max = (a, b) => (a > b ? a : b);
 /**
  * @template T
  * @param {((x: T) => number)} xform

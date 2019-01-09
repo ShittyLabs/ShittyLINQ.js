@@ -21,9 +21,9 @@ describe('Array#prototype#OrderByDescending', function() {
   });
   it('Should return sorted based on custom compare function', function() {
     const inputNoKey = [3, 4, 2, 1];
-    const expectedNoKey = [1, 2, 3, 4];
+    const expectedNoKey = [4, 3, 2, 1];
     const actualNoKey = inputNoKey.OrderByDescending(x => x, function(a, b) {
-      return a - b;
+      return a > b ? 1 : a < b ? -1 : 0;
     });
     expect(actualNoKey).to.eql(expectedNoKey);
   });

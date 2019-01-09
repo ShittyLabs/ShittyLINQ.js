@@ -1,5 +1,6 @@
-const _or = (a, b) => a || b;
+const _or = require('./.internal/_or');
 /**
+ * @this {Array<T>}
  * @template T
  * @param {((x: T) => boolean)} predicate
  * @returns {boolean} If any one element of the sequence satisfies a condition

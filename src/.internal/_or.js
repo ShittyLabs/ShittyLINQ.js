@@ -2,7 +2,8 @@
  * @param {boolean} a
  * @param {boolean} b
  * @returns {boolean}
+ * @private
  */
-module.exports = function(a, b) {
+module.exports = function _or(a, b) {
   return a || b;
 };
