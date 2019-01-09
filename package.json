@@ -4,15 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
-    "precommit": "npm run lint && lint-staged",
-    "lint": "eslint -c .eslintrc src/"
-  },
-  "lint-staged": {
-    "*.js|*.ts": [
-      "prettier --write",
-      "git add"
-    ]
+    "eslint": "eslint -c .eslintrc src/",
+    "lint": "npm run eslint && npm run prettier",
+    "precommit": "npm run lint",
+    "prettier": "prettier --write \"./{src,test}/**/*.js\"",
+    "test": "npm run lint && mocha"
   },
   "prettier": {
     "singleQuote": true
@@ -24,7 +20,6 @@
     "eslint": "^5.12.0",
     "eslint-plugin-prettier": "^3.0.1",
     "husky": "^1.1.0",
-    "lint-staged": "^7.3.0",
     "mocha": "^5.2.0",
     "prettier": "^1.14.3"
   }
