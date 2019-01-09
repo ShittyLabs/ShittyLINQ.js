@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha",
-    "precommit": "lint-staged"
+    "precommit": "npm run lint && lint-staged",
+    "lint": "eslint -c .eslintrc src/"
   },
   "lint-staged": {
     "*.js|*.ts": [
@@ -20,6 +21,8 @@
   "license": "MIT",
   "devDependencies": {
     "chai": "^4.1.2",
+    "eslint": "^5.12.0",
+    "eslint-plugin-prettier": "^3.0.1",
     "husky": "^1.1.0",
     "lint-staged": "^7.3.0",
     "mocha": "^5.2.0",
