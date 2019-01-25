@@ -2,6 +2,7 @@
  * @template T
  * @param {number} count An integer value specifying how many last elements to skip.
  * @returns {Array<T>}
+ * @this {Array<T>}
  */
 function SkipLast(count) {
   if (count === undefined || count === null)

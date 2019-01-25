@@ -2,6 +2,7 @@
  * @template T
  * @param {((x: T) => boolean)} predicate
  * @returns {boolean} If all elements of a sequence satisfy a condition
+ * @this {Array<T>}
  */
 
 function All(predicate) {

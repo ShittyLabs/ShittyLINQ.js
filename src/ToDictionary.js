@@ -4,7 +4,8 @@
  * @template TElement
  * @param {((x: T) => TKey)} keySelector
  * @param {((x: T) => TElement)} elementSelector
- * @returns {Object.<TKey, TElement>}
+ * @returns {{ [key: TKey]: TElement }}
+ * @this {Array<T>}
  */
 function ToDictionary(keySelector, elementSelector) {
   if (keySelector == null)

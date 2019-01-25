@@ -2,6 +2,7 @@
  * @template T
  * @param {((x: T) => boolean)} predicate
  * @returns {T}
+ * @this {Array<T>}
  */
 function Single(predicate) {
   const output = [];

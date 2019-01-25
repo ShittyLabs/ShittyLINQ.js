@@ -2,6 +2,7 @@
  * @template T
  * @param {Array<T>} list
  * @returns {Array<T>}
+ * @this {Array<T>}
  */
 function Concat(list) {
   const output = [];

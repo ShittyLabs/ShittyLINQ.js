@@ -2,6 +2,7 @@
  * @template T
  * @param {((x: T) => boolean)} predicate
  * @returns {Array<T>}
+ * @this {Array<T>}
  */
 function Where(predicate) {
   const output = [];

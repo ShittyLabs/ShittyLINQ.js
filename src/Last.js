@@ -1,6 +1,6 @@
 /**
+ * @this {Array<T>}
  * @template T
- * @param None
  * @returns T
  */
 

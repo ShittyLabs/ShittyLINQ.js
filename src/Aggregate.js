@@ -29,7 +29,8 @@ const _foldl = function(xs, seed, accum) {
  * @param {((memo: T, val: T) => T)} accum
  * @returns {T}
  * @this {Array<T>}
- */ function Aggregate(seed, accum) {
+ */
+function Aggregate(seed, accum) {
   switch (arguments.length) {
     case 2:
       return _foldl(this, seed, accum);

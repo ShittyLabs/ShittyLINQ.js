@@ -1,12 +1,4 @@
-/**
- * @typedef {(<T>(a: T, b: T) => boolean)} IEqualityComparer<T>
- */
-
-/**
- *
- * @type {IEqualityComparer}
- */
-const defaultEqualityComparer = (a, b) => a === b;
+const _defaultEqualityComparer = require('./.internal/_defaultEqualityComparer');
 
 /**
  * @template TOuter
@@ -18,7 +10,6 @@ const defaultEqualityComparer = (a, b) => a === b;
  * @param {((x: TOuter) => TKey)} outerKeySelector
  * @param {((x: TInner) => TKey)} innerKeySelector
  * @param {((x: TOuter, y: Array<TInner>) => TResult)} resultSelector
- * @param {IEqualityComparer} equalityComparer
  * @returns {Array<TResult>}
  */
 function GroupJoin(
@@ -26,7 +17,7 @@ function GroupJoin(
   outerKeySelector,
   innerKeySelector,
   resultSelector,
-  equalityComparer = defaultEqualityComparer
+  equalityComparer = _defaultEqualityComparer
 ) {
   const arr1 = this;
   const output = arr1.reduce((memo, val) => {

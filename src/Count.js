@@ -1,6 +1,7 @@
 /**
  * @template T
  * @returns {number}
+ * @this {Array<T>}
  */
 
 /**

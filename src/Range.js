@@ -1,15 +1,4 @@
-/**
- * Adds two numbers.
- *
- * @param {number} a
- * @param {number} b
- * @returns {number}
- * @private
- */
-function _add(a, b) {
-  return a + b;
-}
-
+const _add = require('./.internal/_add');
 /**
  * Returns an array of integers beginning with `start` and
  * going for `count`.
@@ -19,12 +8,10 @@ function _add(a, b) {
  * @returns {Array<number>}
  */
 function Range(start, count) {
-  if(!Number.isInteger(start))
-  {
+  if (!Number.isInteger(start)) {
     throw '"start" must be an integer';
   }
-  if(!Number.isInteger(count))
-  {
+  if (!Number.isInteger(count)) {
     throw '"count" must be an integer';
   }
   const emptyArray = new Array(count);
