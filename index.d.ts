@@ -12,6 +12,9 @@ interface Array<T> {
   Contains<T>(element: T): boolean;
   Count<T>(): number;
   Count<T>(predicate: (x: T) => boolean): number;
+  Distinct<number>(): Array<number>;
+  Distinct<string>(): Array<string>;
+  Distinct<T>(equalityComparer: IEqualityComparer<T>): Array<T>;
   ElementAt<T>(index: number): T;
   First<T>(): T;
   First<T>(predicate: (x: T) => boolean): T;
