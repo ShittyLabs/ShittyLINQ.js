@@ -1,4 +1,4 @@
-const _identity = require('./.internal/_identity')
+const _identity = require('./.internal/_identity');
 /**
  * @param {((x: T) => number)} xform
  * @returns {number} Average is computed of numerical values
