@@ -4,6 +4,7 @@
  * @param {Array<TSource>} second An Array<T> to compare to the first sequence.
  * @returns {boolean} `true` if the two source sequences are of equal length and their corresponding elements are equal according to the default equality comparer for their type; otherwise, `false`.
  * @throws {TypeError} `sequence` is `null`.
+ * @this {Array<T>}
  */
 function SequenceEqual(sequence) {
   if (!sequence) {

@@ -4,6 +4,7 @@ const _defaultComparer = require('./.internal/_defaultComparer');
  * @param {((x: T) => TKey)} keySelector
  * @template U
  * @returns {Array<U>}
+ * @this {Array<T>}
  */
 function OrderBy(keySelector, comparer = _defaultComparer) {
   if (keySelector == null)

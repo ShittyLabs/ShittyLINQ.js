@@ -6,6 +6,7 @@
  * @param {Number} count - The number of times to repeat the value in the generated sequence.
  * @returns {Array<TResult>} An Array<T> that contains a repeated value.
  * @throws {RangeError} `count` is less than 0.
+ * @this {Array<T>}
  */
 function Repeat(element, count) {
   if (count < 0) {

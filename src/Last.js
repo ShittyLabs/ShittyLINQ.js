@@ -1,4 +1,5 @@
 /**
+ * @this {Array<T>}
  * @template T
  * @returns T
  */

@@ -2,6 +2,7 @@
  * @template T
  * @template U
  * @returns {Array<U>}
+ * @this {Array<T>}
  */
 function Reverse() {
   if (this === undefined) throw 'Undefined value exception!';

@@ -3,6 +3,7 @@
  * @template U
  * @param {((x: T) => U)} xform
  * @returns {Array<U>}
+ * @this {Array<T>}
  */
 function Select(xform) {
   const output = [];

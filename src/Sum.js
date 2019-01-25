@@ -3,6 +3,7 @@
  * @param {Array<T>} array
  * @param {((x: T) => number)} selector
  * @returns {number}
+ * @this {Array<T>}
  */
 function _selectorSum(array, selector) {
   let predicateResult = array.map(selector);
@@ -15,9 +16,10 @@ function _selectorSum(array, selector) {
  */
 
 /**
- * @template number?
  * @returns {number}
- */ function Sum(selector) {
+ * @this {Array<number>}
+ */
+function Sum(selector) {
   if (selector) {
     if (!(selector instanceof Function)) {
       throw new Error('"selector" must be a function');

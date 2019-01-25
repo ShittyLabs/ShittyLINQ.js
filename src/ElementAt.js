@@ -2,6 +2,7 @@
  * @template T
  * @param {number} index
  * @returns {T}
+ * @this {Array<T>}
  */
 function ElementAt(index) {
   if (this === undefined) throw 'Value cannot be undefined.';

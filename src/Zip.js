@@ -5,6 +5,7 @@
  * @param {Array<T>} second
  * @param {((x: U, y: T) => K)} applyFn
  * @returns {Array<K>}
+ * @this {Array<T>}
  */
 function Zip(second, applyFn) {
   const output = [];
