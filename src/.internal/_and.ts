@@ -4,6 +4,6 @@
  * @param {boolean} b
  * @private
  */
-module.exports = function _and(a, b) {
+export function _and(a: boolean, b: boolean) {
   return a && b;
 };

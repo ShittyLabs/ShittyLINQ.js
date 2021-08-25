@@ -6,7 +6,7 @@
  * @returns {U}
  * @this {Array<T>}
  */
-const _foldl = function(xs, seed, accum) {
+function _foldl<T, U>(xs, seed: U, accum: ((memo: U, val: T) => U)): U {
   let curr = seed;
   for (const x of xs) {
     curr = accum(curr, x);
@@ -30,7 +30,7 @@ const _foldl = function(xs, seed, accum) {
  * @returns {T}
  * @this {Array<T>}
  */
-function Aggregate(seed, accum) {
+export function Aggregate<T>(seed, accum: ((memo: T, val: T) => T)): T {
   switch (arguments.length) {
     case 2:
       return _foldl(this, seed, accum);
@@ -40,5 +40,3 @@ function Aggregate(seed, accum) {
       throw new Error();
   }
 }
-
-module.exports = Aggregate;

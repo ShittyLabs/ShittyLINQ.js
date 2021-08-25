@@ -5,6 +5,6 @@
  * @returns {T}
  * @private
  */
-module.exports = function _min(a, b) {
+export function _min<T>(a: T, b: T): T {
   return a < b ? a : b;
 };

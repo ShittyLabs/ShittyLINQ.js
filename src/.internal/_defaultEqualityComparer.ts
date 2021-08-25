@@ -5,6 +5,6 @@
  * @returns {boolean}
  * @private
  */
-module.exports = function _defaultEqualityComparer(a, b) {
+export function _defaultEqualityComparer<T>(a: T, b: T): boolean {
   return a === b;
 };

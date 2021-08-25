@@ -4,7 +4,7 @@
  * @returns {Array<T>}
  * @this {Array<T>}
  */
-function Concat(list) {
+export function Concat(list) {
   const output = [];
   for (let x of this) {
     output.push(x);
@@ -14,5 +14,3 @@ function Concat(list) {
   }
   return output;
 }
-
-module.exports = Concat;

@@ -1,4 +1,4 @@
-const _defaultComparer = require('./.internal/_defaultComparer');
+import { _defaultComparer } from './.internal/_defaultComparer';
 
 /**
  * @template T
@@ -6,7 +6,10 @@ const _defaultComparer = require('./.internal/_defaultComparer');
  * @returns {Array<U>}
  * @this {Array<T>}
  */
-function OrderByDescending(keySelector, comparer = _defaultComparer) {
+export function OrderByDescending<T, U>(
+  keySelector,
+  comparer = _defaultComparer
+): Array<U> {
   if (keySelector == null)
     throw 'Argument Null Exception - keySelector is null.';
   if (this === undefined) throw 'Undefined value exception!';
@@ -15,5 +18,3 @@ function OrderByDescending(keySelector, comparer = _defaultComparer) {
     return comparer(keySelector(b), keySelector(a));
   });
 }
-
-module.exports = OrderByDescending;

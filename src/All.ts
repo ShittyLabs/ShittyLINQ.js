@@ -5,7 +5,7 @@
  * @this {Array<T>}
  */
 
-function All(predicate) {
+export function All<T>(predicate: ((x: T) => boolean)): boolean {
   if (this.length === 0) {
     throw 'source contains no elements';
   }
@@ -22,5 +22,3 @@ function All(predicate) {
   }
   return result;
 }
-
-module.exports = All;

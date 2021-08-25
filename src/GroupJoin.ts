@@ -1,4 +1,4 @@
-const _defaultEqualityComparer = require('./.internal/_defaultEqualityComparer');
+import { _defaultEqualityComparer } from "./.internal/_defaultEqualityComparer";
 
 /**
  * @template TOuter
@@ -12,7 +12,7 @@ const _defaultEqualityComparer = require('./.internal/_defaultEqualityComparer')
  * @param {((x: TOuter, y: Array<TInner>) => TResult)} resultSelector
  * @returns {Array<TResult>}
  */
-function GroupJoin(
+export function GroupJoin(
   inner,
   outerKeySelector,
   innerKeySelector,
@@ -29,5 +29,3 @@ function GroupJoin(
   }, []);
   return output.map(groupings => resultSelector(...groupings));
 }
-
-module.exports = GroupJoin;

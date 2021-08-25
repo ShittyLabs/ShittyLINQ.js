@@ -4,7 +4,7 @@
  * @returns {T}
  * @this {Array<T>}
  */
-function First(predicate) {
+export function First<T>(predicate: ((x: T) => boolean)): T {
   if (!this.length) throw 'Sequence contains no elements';
   if (predicate) {
     const val = this.find(predicate);
@@ -13,4 +13,3 @@ function First(predicate) {
   }
   return this[0];
 }
-module.exports = First;

@@ -1,4 +1,5 @@
-const _add = require('./.internal/_add');
+import { _add } from './.internal/_add';
+
 /**
  * Returns an array of integers beginning with `start` and
  * going for `count`.
@@ -7,7 +8,7 @@ const _add = require('./.internal/_add');
  * @param {number} count - Length of range. Must be an integer.
  * @returns {Array<number>}
  */
-function Range(start, count) {
+export function Range(start: number, count: number): Array<number> {
   if (!Number.isInteger(start)) {
     throw '"start" must be an integer';
   }
@@ -17,5 +18,3 @@ function Range(start, count) {
   const emptyArray = new Array(count);
   return emptyArray.fill(start).map(_add);
 }
-
-module.exports = Range;

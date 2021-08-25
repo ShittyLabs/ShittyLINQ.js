@@ -2,8 +2,6 @@
  * Returns an empty array
  * @returns {Array}
  */
-function Empty() {
+export function Empty() {
   return [];
 }
-
-module.exports = Empty;

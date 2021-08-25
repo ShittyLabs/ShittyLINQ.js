@@ -9,7 +9,7 @@
  * @param {((x: T) => boolean)} predicate
  * @returns {number}
  */
-function Count(predicate) {
+export function Count(predicate) {
   switch (arguments.length) {
     case 0:
       return this.Aggregate(0, (memo, v) => ++memo);
@@ -19,5 +19,3 @@ function Count(predicate) {
       throw new Error();
   }
 }
-
-module.exports = Count;

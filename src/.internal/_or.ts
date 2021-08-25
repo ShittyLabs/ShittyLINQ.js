@@ -4,6 +4,6 @@
  * @returns {boolean}
  * @private
  */
-module.exports = function _or(a, b) {
+export function _or(a, b) {
   return a || b;
-};
+}

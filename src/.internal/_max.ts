@@ -5,6 +5,6 @@
  * @returns {T}
  * @private
  */
-module.exports = function _max(a, b) {
+export function _max<T>(a: T, b: T): T {
   return a > b ? a : b;
 };

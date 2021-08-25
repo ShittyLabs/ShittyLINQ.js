@@ -4,8 +4,7 @@
  * @returns {T}
  * @this {Array<T>}
  */
-function FirstOrDefault(predicate) {
+export function FirstOrDefault<T>(predicate: ((x: T) => boolean)): T {
   if (predicate) return this.find(predicate);
   return this[0];
 }
-module.exports = FirstOrDefault;

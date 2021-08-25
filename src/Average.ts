@@ -1,11 +1,6 @@
-const _identity = require('./.internal/_identity');
-/**
- * @param {((x: T) => number)} xform
- * @returns {number} Average is computed of numerical values
- * @this {Array<T>}
- */
+import { _identity } from "./.internal/_identity";
 
-function Average(xform) {
+export function Average<T>(xform: ((x: T) => number)): number {
   if (this.length === 0) {
     throw 'source contains no elements';
   }
@@ -17,5 +12,3 @@ function Average(xform) {
 
   return (1.0 * sum) / count;
 }
-
-module.exports = Average;

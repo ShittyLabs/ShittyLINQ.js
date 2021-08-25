@@ -3,4 +3,6 @@
  * @param {T} x
  * @returns {T}
  */
-module.exports = x => x;
+export function _identity<T>(x: T) {
+  return x;
+}

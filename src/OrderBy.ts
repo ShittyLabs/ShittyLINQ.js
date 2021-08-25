@@ -1,12 +1,9 @@
-const _defaultComparer = require('./.internal/_defaultComparer');
+import { _defaultComparer } from './.internal/_defaultComparer';
 
-/**
- * @param {((x: T) => TKey)} keySelector
- * @template U
- * @returns {Array<U>}
- * @this {Array<T>}
- */
-function OrderBy(keySelector, comparer = _defaultComparer) {
+export function OrderBy<TValue, TKey>(
+  keySelector: ((x: TValue) => TKey),
+  comparer = _defaultComparer
+): Array<TValue> {
   if (keySelector == null)
     throw 'Argument Null Exception - keySelector is null.';
   if (this === undefined) throw 'Undefined value exception!';
@@ -15,5 +12,3 @@ function OrderBy(keySelector, comparer = _defaultComparer) {
     return comparer(keySelector(a), keySelector(b));
   });
 }
-
-module.exports = OrderBy;

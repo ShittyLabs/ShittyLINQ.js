@@ -1,6 +1,6 @@
-const Aggregate = require('./src/Aggregate');
-const All = require('./src/All');
-const Any = require('./src/Any');
+import { Aggregate } from './src/Aggregate';
+import { All } from './src/All';
+import {Any } from './src/Any';
 const Average = require('./src/Average');
 const Concat = require('./src/Concat');
 const Contains = require('./src/Contains');
@@ -35,8 +35,14 @@ const Union = require('./src/Union');
 const Where = require('./src/Where');
 const Zip = require('./src/Zip');
 
+declare global {
+  interface Array<T> {
+    Aggregate: typeof Aggregate;
+  }
+}
+Array.prototype.Aggregate = Aggregate;
+
 const bindAll = function() {
-  Array.prototype.Aggregate = Aggregate;
   Array.prototype.All = All;
   Array.prototype.Any = Any;
   Array.prototype.Average = Average;

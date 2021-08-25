@@ -7,6 +7,6 @@
  * @private
  * @memberof
  */
-module.exports = function _add(a, b) {
+export function _add(a, b) {
   return a + b;
 };

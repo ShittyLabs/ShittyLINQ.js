@@ -4,8 +4,6 @@
  * @returns {Array<T>}
  * @this {Array<T>}
  */
-function Prepend(element) {
+export function Prepend<T>(element: T): Array<T> {
   return [element].concat(this);
 }
-
-module.exports = Prepend;
