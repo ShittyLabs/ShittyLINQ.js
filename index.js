@@ -1,6 +1,7 @@
 const Aggregate = require('./src/Aggregate');
 const All = require('./src/All');
 const Any = require('./src/Any');
+const Append = require('./src/Append');
 const Average = require('./src/Average');
 const Concat = require('./src/Concat');
 const Contains = require('./src/Contains');
@@ -39,6 +40,7 @@ const bindAll = function() {
   Array.prototype.Aggregate = Aggregate;
   Array.prototype.All = All;
   Array.prototype.Any = Any;
+  Array.prototype.Append = Append;
   Array.prototype.Average = Average;
   Array.prototype.Concat = Concat;
   Array.prototype.Contains = Contains;
