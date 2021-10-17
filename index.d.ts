@@ -21,19 +21,28 @@ interface Array<T> {
     First<T>(predicate: (x: T) => boolean): T;
     FirstOrDefault<T>(): T;
     FirstOrDefault<T>(predicate: (x: T) => boolean): T;
+    GroupBy<TSource, TKey, TElement, TResult>(
+        keySelector: (source: TSource) => TKey,
+        elementSelector: (source: TSource) => TElement,
+        resultSelector: (key: TKey, elements: Array<TElement>) => TResult
+    ): Array<TResult>;
+    GroupBy<TSource, TKey, TElement>(
+        keySelector: (source: TSource) => TKey,
+        elementSelector: (source: TSource) => TElement
+    ): Array<{ key: TKey, values: Array<TElement> }>;
     GroupJoin<T, U, V, K>(
         inner: Array<U>,
         outerKeySelector: ((x: T) => K),
         innerKeySelector: ((x: T) => K),
         resultSelector: ((x: T, y: U) => V)
-    );
+    ): Array<V>;
     GroupJoin<T, U, V, K>(
         inner: Array<U>,
         outerKeySelector: ((x: T) => K),
         innerKeySelector: ((x: T) => K),
         resultSelector: ((x: T, y: U) => V),
         equalityComparer: IEqualityComparer<T>
-    );
+    ): Array<V>;
     Last<T>(): T;
     Join<TOuter, TInner, TKey, TResult>(
         inner: TInner[],
