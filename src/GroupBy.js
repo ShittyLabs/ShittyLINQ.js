@@ -29,19 +29,19 @@ function GroupBy(
   resultSelector = defaultResultSelector
 ) {
   if (this == null) {
-    throw '`source` is `null`';
+    throw new Error('`source` is `null`');
   }
 
   if (keySelector == null) {
-    throw '`keySelector` is `null`';
+    throw new Error('`keySelector` is `null`');
   }
 
   if (elementSelector == null) {
-    throw '`elementSelector` is `null`';
+    throw new Error('`elementSelector` is `null`');
   }
 
   if (resultSelector == null) {
-    throw '`resultSelector` is `null`';
+    throw new Error('`resultSelector` is `null`');
   }
 
   const grouped = this.Aggregate(new Map(), (groupings, element) => {
