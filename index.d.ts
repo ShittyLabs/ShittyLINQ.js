@@ -43,6 +43,8 @@ interface Array<T> {
         resultSelector: ((x: T, y: U) => V),
         equalityComparer: IEqualityComparer<T>
     ): Array<V>;
+    Intersect<T>(second: Array<T>): Array<T>;
+    Intersect<T>(second: Array<T>, equalityComparer: IEqualityComparer<T>): Array<T>;
     Last<T>(): T;
     Join<TOuter, TInner, TKey, TResult>(
         inner: TInner[],
