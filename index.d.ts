@@ -17,6 +17,8 @@ interface Array<T> {
     Distinct<string>(): Array<string>;
     Distinct<T>(equalityComparer: IEqualityComparer<T>): Array<T>;
     ElementAt<T>(index: number): T;
+    Except<T>(second: Array<T>): Array<T>;
+    Except<T>(second: Array<T>, equalityComparer: IEqualityComparer<T>): Array<T>;
     First<T>(): T;
     First<T>(predicate: (x: T) => boolean): T;
     FirstOrDefault<T>(): T;
